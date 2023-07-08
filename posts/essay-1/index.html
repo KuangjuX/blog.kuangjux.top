@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>随笔-对未来的焦虑 | KuangjuX</title>
+<meta name="keywords" content="">
+<meta name="description" content="两周前我度过了一段艰难的时光，原因是我看到了我的研究生导师发给组内另一位同学的 paper，里面充斥着大量的数学公式，但这却是我所厌恶的类型。我喜欢 OSDI，SOSP，EuroSys 那种有着简单的 idea，但是通过大量的工程构建原型系统和 trade off 后而得出来的成果，这种可以构建出有效的系统更令我感到兴奋。
+在本科阶段我编写了大量的代码，大部分是贴近计算机底层与硬件的代码，了解计算机底层是如何为人类服务的是如此有趣且令人兴奋。但我一直以来都对 AI 以及 ML 有一些偏见,我觉得依靠别人写的框架来玄学调参是件没有挑战且没有意思的事情。想到我的研究生生涯可能会做一些相关的事情我就感到难过与焦虑。同时，我也隐隐觉得，我也再也不能像大一大二时那么有求知欲，可以同时学习不同领域的东西。现在的我已经很难有决心抛弃掉自己花费了太长时间所做的领域。
+于是有一天我实在忍不住了向我导师发了消息，导师约了我去所里聊一聊。聊的过程中觉得导师是一个很 open 的人，也发现了一些可以做的相关的事情，例如 AI 编译器在各类硬件的优化，我觉得可以接受，我就说，好，我先去学习一下。
+可还有些不甘心。经常有人问我为什么读研去计算所，但是我却来清华实习。我只能回答，因为我本科都在做相关的事情。他们也发现了我似乎在做一些毫无联系的事情，而我也不得不承认，我可能也只是由着自己的性子，在做一些对未来没有什么助益、但我自己却认为高尚的事情。我总认为我放弃了 GPA，用更多时间去做自己认为更有意义的事情，但我现在才发现我是如此羡慕那些我曾经瞧不上的人能够有更多的选择权利。
+我也有学术梦想，希望我的工作可以发表在系统/体系结构顶级会议上，大部分那些有能力发表在顶级会议上的人基本不会改变方向且背靠顶级实验室的加持。这两样我一个都没有。不过看了陈天奇的自述倒给了我一些鼓舞，他在本科与研究生阶段也在没有 idea 的岁月中度过，也并没有惊人的成就。直到他去威斯康星留学，渐渐将从前积累的深度学习理论与系统结合，最终写出了 tvm 等震惊学术界的作品。
+同时我也在考虑要不要读博的问题。一个选择是在读研期间转成直博，不过目前来看我并不希望我的眼界局限在国内；另一个选择是在国内读完研后出国读博，然而一方面是我的英语很差；另一方面则是因为读完研再读博年龄就已经很大了，还要考虑成家的问题。或许更好的选择是读完研工作一段时间再考虑这件事情。不过船到桥头自然直，此事或许要留到日后评说。
+今日是毕业典礼，没回学校，让同学帮我领了毕业证书，算是彻底毕业了。看了大家都在朋友圈发毕业照，我却没在场，有点遗憾，但就这样吧。
+2023.6.27 北京">
+<meta name="author" content="">
+<link rel="canonical" href="http://dev.kuangjux.top/posts/essay-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://dev.kuangjux.top/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dev.kuangjux.top/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dev.kuangjux.top/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://dev.kuangjux.top/apple-touch-icon.png">
+<link rel="mask-icon" href="http://dev.kuangjux.top/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="随笔-对未来的焦虑" />
+<meta property="og:description" content="两周前我度过了一段艰难的时光，原因是我看到了我的研究生导师发给组内另一位同学的 paper，里面充斥着大量的数学公式，但这却是我所厌恶的类型。我喜欢 OSDI，SOSP，EuroSys 那种有着简单的 idea，但是通过大量的工程构建原型系统和 trade off 后而得出来的成果，这种可以构建出有效的系统更令我感到兴奋。
+在本科阶段我编写了大量的代码，大部分是贴近计算机底层与硬件的代码，了解计算机底层是如何为人类服务的是如此有趣且令人兴奋。但我一直以来都对 AI 以及 ML 有一些偏见,我觉得依靠别人写的框架来玄学调参是件没有挑战且没有意思的事情。想到我的研究生生涯可能会做一些相关的事情我就感到难过与焦虑。同时，我也隐隐觉得，我也再也不能像大一大二时那么有求知欲，可以同时学习不同领域的东西。现在的我已经很难有决心抛弃掉自己花费了太长时间所做的领域。
+于是有一天我实在忍不住了向我导师发了消息，导师约了我去所里聊一聊。聊的过程中觉得导师是一个很 open 的人，也发现了一些可以做的相关的事情，例如 AI 编译器在各类硬件的优化，我觉得可以接受，我就说，好，我先去学习一下。
+可还有些不甘心。经常有人问我为什么读研去计算所，但是我却来清华实习。我只能回答，因为我本科都在做相关的事情。他们也发现了我似乎在做一些毫无联系的事情，而我也不得不承认，我可能也只是由着自己的性子，在做一些对未来没有什么助益、但我自己却认为高尚的事情。我总认为我放弃了 GPA，用更多时间去做自己认为更有意义的事情，但我现在才发现我是如此羡慕那些我曾经瞧不上的人能够有更多的选择权利。
+我也有学术梦想，希望我的工作可以发表在系统/体系结构顶级会议上，大部分那些有能力发表在顶级会议上的人基本不会改变方向且背靠顶级实验室的加持。这两样我一个都没有。不过看了陈天奇的自述倒给了我一些鼓舞，他在本科与研究生阶段也在没有 idea 的岁月中度过，也并没有惊人的成就。直到他去威斯康星留学，渐渐将从前积累的深度学习理论与系统结合，最终写出了 tvm 等震惊学术界的作品。
+同时我也在考虑要不要读博的问题。一个选择是在读研期间转成直博，不过目前来看我并不希望我的眼界局限在国内；另一个选择是在国内读完研后出国读博，然而一方面是我的英语很差；另一方面则是因为读完研再读博年龄就已经很大了，还要考虑成家的问题。或许更好的选择是读完研工作一段时间再考虑这件事情。不过船到桥头自然直，此事或许要留到日后评说。
+今日是毕业典礼，没回学校，让同学帮我领了毕业证书，算是彻底毕业了。看了大家都在朋友圈发毕业照，我却没在场，有点遗憾，但就这样吧。
+2023.6.27 北京" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dev.kuangjux.top/posts/essay-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-08T22:57:09+08:00" />
+<meta property="article:modified_time" content="2023-07-08T22:57:09+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="随笔-对未来的焦虑"/>
+<meta name="twitter:description" content="两周前我度过了一段艰难的时光，原因是我看到了我的研究生导师发给组内另一位同学的 paper，里面充斥着大量的数学公式，但这却是我所厌恶的类型。我喜欢 OSDI，SOSP，EuroSys 那种有着简单的 idea，但是通过大量的工程构建原型系统和 trade off 后而得出来的成果，这种可以构建出有效的系统更令我感到兴奋。
+在本科阶段我编写了大量的代码，大部分是贴近计算机底层与硬件的代码，了解计算机底层是如何为人类服务的是如此有趣且令人兴奋。但我一直以来都对 AI 以及 ML 有一些偏见,我觉得依靠别人写的框架来玄学调参是件没有挑战且没有意思的事情。想到我的研究生生涯可能会做一些相关的事情我就感到难过与焦虑。同时，我也隐隐觉得，我也再也不能像大一大二时那么有求知欲，可以同时学习不同领域的东西。现在的我已经很难有决心抛弃掉自己花费了太长时间所做的领域。
+于是有一天我实在忍不住了向我导师发了消息，导师约了我去所里聊一聊。聊的过程中觉得导师是一个很 open 的人，也发现了一些可以做的相关的事情，例如 AI 编译器在各类硬件的优化，我觉得可以接受，我就说，好，我先去学习一下。
+可还有些不甘心。经常有人问我为什么读研去计算所，但是我却来清华实习。我只能回答，因为我本科都在做相关的事情。他们也发现了我似乎在做一些毫无联系的事情，而我也不得不承认，我可能也只是由着自己的性子，在做一些对未来没有什么助益、但我自己却认为高尚的事情。我总认为我放弃了 GPA，用更多时间去做自己认为更有意义的事情，但我现在才发现我是如此羡慕那些我曾经瞧不上的人能够有更多的选择权利。
+我也有学术梦想，希望我的工作可以发表在系统/体系结构顶级会议上，大部分那些有能力发表在顶级会议上的人基本不会改变方向且背靠顶级实验室的加持。这两样我一个都没有。不过看了陈天奇的自述倒给了我一些鼓舞，他在本科与研究生阶段也在没有 idea 的岁月中度过，也并没有惊人的成就。直到他去威斯康星留学，渐渐将从前积累的深度学习理论与系统结合，最终写出了 tvm 等震惊学术界的作品。
+同时我也在考虑要不要读博的问题。一个选择是在读研期间转成直博，不过目前来看我并不希望我的眼界局限在国内；另一个选择是在国内读完研后出国读博，然而一方面是我的英语很差；另一方面则是因为读完研再读博年龄就已经很大了，还要考虑成家的问题。或许更好的选择是读完研工作一段时间再考虑这件事情。不过船到桥头自然直，此事或许要留到日后评说。
+今日是毕业典礼，没回学校，让同学帮我领了毕业证书，算是彻底毕业了。看了大家都在朋友圈发毕业照，我却没在场，有点遗憾，但就这样吧。
+2023.6.27 北京"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://dev.kuangjux.top/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "随笔-对未来的焦虑",
+      "item": "http://dev.kuangjux.top/posts/essay-1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "随笔-对未来的焦虑",
+  "name": "随笔-对未来的焦虑",
+  "description": "两周前我度过了一段艰难的时光，原因是我看到了我的研究生导师发给组内另一位同学的 paper，里面充斥着大量的数学公式，但这却是我所厌恶的类型。我喜欢 OSDI，SOSP，EuroSys 那种有着简单的 idea，但是通过大量的工程构建原型系统和 trade off 后而得出来的成果，这种可以构建出有效的系统更令我感到兴奋。\n在本科阶段我编写了大量的代码，大部分是贴近计算机底层与硬件的代码，了解计算机底层是如何为人类服务的是如此有趣且令人兴奋。但我一直以来都对 AI 以及 ML 有一些偏见,我觉得依靠别人写的框架来玄学调参是件没有挑战且没有意思的事情。想到我的研究生生涯可能会做一些相关的事情我就感到难过与焦虑。同时，我也隐隐觉得，我也再也不能像大一大二时那么有求知欲，可以同时学习不同领域的东西。现在的我已经很难有决心抛弃掉自己花费了太长时间所做的领域。\n于是有一天我实在忍不住了向我导师发了消息，导师约了我去所里聊一聊。聊的过程中觉得导师是一个很 open 的人，也发现了一些可以做的相关的事情，例如 AI 编译器在各类硬件的优化，我觉得可以接受，我就说，好，我先去学习一下。\n可还有些不甘心。经常有人问我为什么读研去计算所，但是我却来清华实习。我只能回答，因为我本科都在做相关的事情。他们也发现了我似乎在做一些毫无联系的事情，而我也不得不承认，我可能也只是由着自己的性子，在做一些对未来没有什么助益、但我自己却认为高尚的事情。我总认为我放弃了 GPA，用更多时间去做自己认为更有意义的事情，但我现在才发现我是如此羡慕那些我曾经瞧不上的人能够有更多的选择权利。\n我也有学术梦想，希望我的工作可以发表在系统/体系结构顶级会议上，大部分那些有能力发表在顶级会议上的人基本不会改变方向且背靠顶级实验室的加持。这两样我一个都没有。不过看了陈天奇的自述倒给了我一些鼓舞，他在本科与研究生阶段也在没有 idea 的岁月中度过，也并没有惊人的成就。直到他去威斯康星留学，渐渐将从前积累的深度学习理论与系统结合，最终写出了 tvm 等震惊学术界的作品。\n同时我也在考虑要不要读博的问题。一个选择是在读研期间转成直博，不过目前来看我并不希望我的眼界局限在国内；另一个选择是在国内读完研后出国读博，然而一方面是我的英语很差；另一方面则是因为读完研再读博年龄就已经很大了，还要考虑成家的问题。或许更好的选择是读完研工作一段时间再考虑这件事情。不过船到桥头自然直，此事或许要留到日后评说。\n今日是毕业典礼，没回学校，让同学帮我领了毕业证书，算是彻底毕业了。看了大家都在朋友圈发毕业照，我却没在场，有点遗憾，但就这样吧。\n2023.6.27 北京",
+  "keywords": [
+    
+  ],
+  "articleBody": "两周前我度过了一段艰难的时光，原因是我看到了我的研究生导师发给组内另一位同学的 paper，里面充斥着大量的数学公式，但这却是我所厌恶的类型。我喜欢 OSDI，SOSP，EuroSys 那种有着简单的 idea，但是通过大量的工程构建原型系统和 trade off 后而得出来的成果，这种可以构建出有效的系统更令我感到兴奋。\n在本科阶段我编写了大量的代码，大部分是贴近计算机底层与硬件的代码，了解计算机底层是如何为人类服务的是如此有趣且令人兴奋。但我一直以来都对 AI 以及 ML 有一些偏见,我觉得依靠别人写的框架来玄学调参是件没有挑战且没有意思的事情。想到我的研究生生涯可能会做一些相关的事情我就感到难过与焦虑。同时，我也隐隐觉得，我也再也不能像大一大二时那么有求知欲，可以同时学习不同领域的东西。现在的我已经很难有决心抛弃掉自己花费了太长时间所做的领域。\n于是有一天我实在忍不住了向我导师发了消息，导师约了我去所里聊一聊。聊的过程中觉得导师是一个很 open 的人，也发现了一些可以做的相关的事情，例如 AI 编译器在各类硬件的优化，我觉得可以接受，我就说，好，我先去学习一下。\n可还有些不甘心。经常有人问我为什么读研去计算所，但是我却来清华实习。我只能回答，因为我本科都在做相关的事情。他们也发现了我似乎在做一些毫无联系的事情，而我也不得不承认，我可能也只是由着自己的性子，在做一些对未来没有什么助益、但我自己却认为高尚的事情。我总认为我放弃了 GPA，用更多时间去做自己认为更有意义的事情，但我现在才发现我是如此羡慕那些我曾经瞧不上的人能够有更多的选择权利。\n我也有学术梦想，希望我的工作可以发表在系统/体系结构顶级会议上，大部分那些有能力发表在顶级会议上的人基本不会改变方向且背靠顶级实验室的加持。这两样我一个都没有。不过看了陈天奇的自述倒给了我一些鼓舞，他在本科与研究生阶段也在没有 idea 的岁月中度过，也并没有惊人的成就。直到他去威斯康星留学，渐渐将从前积累的深度学习理论与系统结合，最终写出了 tvm 等震惊学术界的作品。\n同时我也在考虑要不要读博的问题。一个选择是在读研期间转成直博，不过目前来看我并不希望我的眼界局限在国内；另一个选择是在国内读完研后出国读博，然而一方面是我的英语很差；另一方面则是因为读完研再读博年龄就已经很大了，还要考虑成家的问题。或许更好的选择是读完研工作一段时间再考虑这件事情。不过船到桥头自然直，此事或许要留到日后评说。\n今日是毕业典礼，没回学校，让同学帮我领了毕业证书，算是彻底毕业了。看了大家都在朋友圈发毕业照，我却没在场，有点遗憾，但就这样吧。\n2023.6.27 北京\n",
+  "wordCount" : "29",
+  "inLanguage": "en",
+  "datePublished": "2023-07-08T22:57:09+08:00",
+  "dateModified": "2023-07-08T22:57:09+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://dev.kuangjux.top/posts/essay-1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "KuangjuX",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://dev.kuangjux.top/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://dev.kuangjux.top/" accesskey="h" title="KuangjuX (Alt + H)">KuangjuX</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      随笔-对未来的焦虑
+    </h1>
+    <div class="post-meta"><span title='2023-07-08 22:57:09 +0800 CST'>July 8, 2023</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>两周前我度过了一段艰难的时光，原因是我看到了我的研究生导师发给组内另一位同学的 paper，里面充斥着大量的数学公式，但这却是我所厌恶的类型。我喜欢 OSDI，SOSP，EuroSys 那种有着简单的 idea，但是通过大量的工程构建原型系统和 trade off 后而得出来的成果，这种可以构建出有效的系统更令我感到兴奋。</p>
+<p>在本科阶段我编写了大量的代码，大部分是贴近计算机底层与硬件的代码，了解计算机底层是如何为人类服务的是如此有趣且令人兴奋。但我一直以来都对 AI 以及 ML 有一些偏见,我觉得依靠别人写的框架来玄学调参是件没有挑战且没有意思的事情。想到我的研究生生涯可能会做一些相关的事情我就感到难过与焦虑。同时，我也隐隐觉得，我也再也不能像大一大二时那么有求知欲，可以同时学习不同领域的东西。现在的我已经很难有决心抛弃掉自己花费了太长时间所做的领域。</p>
+<p>于是有一天我实在忍不住了向我导师发了消息，导师约了我去所里聊一聊。聊的过程中觉得导师是一个很 open 的人，也发现了一些可以做的相关的事情，例如 AI 编译器在各类硬件的优化，我觉得可以接受，我就说，好，我先去学习一下。</p>
+<p>可还有些不甘心。经常有人问我为什么读研去计算所，但是我却来清华实习。我只能回答，因为我本科都在做相关的事情。他们也发现了我似乎在做一些毫无联系的事情，而我也不得不承认，我可能也只是由着自己的性子，在做一些对未来没有什么助益、但我自己却认为高尚的事情。我总认为我放弃了 GPA，用更多时间去做自己认为更有意义的事情，但我现在才发现我是如此羡慕那些我曾经瞧不上的人能够有更多的选择权利。</p>
+<p>我也有学术梦想，希望我的工作可以发表在系统/体系结构顶级会议上，大部分那些有能力发表在顶级会议上的人基本不会改变方向且背靠顶级实验室的加持。这两样我一个都没有。不过看了陈天奇的自述倒给了我一些鼓舞，他在本科与研究生阶段也在没有 idea 的岁月中度过，也并没有惊人的成就。直到他去威斯康星留学，渐渐将从前积累的深度学习理论与系统结合，最终写出了 tvm 等震惊学术界的作品。</p>
+<p>同时我也在考虑要不要读博的问题。一个选择是在读研期间转成直博，不过目前来看我并不希望我的眼界局限在国内；另一个选择是在国内读完研后出国读博，然而一方面是我的英语很差；另一方面则是因为读完研再读博年龄就已经很大了，还要考虑成家的问题。或许更好的选择是读完研工作一段时间再考虑这件事情。不过船到桥头自然直，此事或许要留到日后评说。</p>
+<p>今日是毕业典礼，没回学校，让同学帮我领了毕业证书，算是彻底毕业了。看了大家都在朋友圈发毕业照，我却没在场，有点遗憾，但就这样吧。</p>
+<hr>
+<p>2023.6.27 北京</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://dev.kuangjux.top/">KuangjuX</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
