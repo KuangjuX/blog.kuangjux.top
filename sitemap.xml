@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://blog.kuangjux.top/</loc>
+    <loc>http://dev.kuangjux.top/</loc>
     <lastmod>2023-07-08T15:13:41+08:00</lastmod>
   </url><url>
-    <loc>http://blog.kuangjux.top/posts/</loc>
+    <loc>http://dev.kuangjux.top/posts/</loc>
     <lastmod>2023-07-08T15:13:41+08:00</lastmod>
   </url><url>
-    <loc>http://blog.kuangjux.top/posts/new-start/</loc>
+    <loc>http://dev.kuangjux.top/posts/new-start/</loc>
     <lastmod>2023-07-08T15:13:41+08:00</lastmod>
   </url><url>
-    <loc>http://blog.kuangjux.top/categories/</loc>
+    <loc>http://dev.kuangjux.top/categories/</loc>
   </url><url>
-    <loc>http://blog.kuangjux.top/tags/</loc>
+    <loc>http://dev.kuangjux.top/tags/</loc>
   </url>
 </urlset>
